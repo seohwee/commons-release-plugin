@@ -91,10 +91,10 @@ public class ReadmeHtmlVelocityDelegate {
         final String artifactIdWithFirstLetterscapitalized =
                 StringUtils.capitalize(wordCommons)
                         + "-"
-                        + artifactShortName;
+                        + artifactShortName.toUpperCase();
         final VelocityContext context = new VelocityContext();
         context.internalPut("artifactIdWithFirstLetterscapitalized", artifactIdWithFirstLetterscapitalized);
-        context.internalPut("artifactShortName", artifactShortName);
+        context.internalPut("artifactShortName", artifactShortName.toUpperCase());
         context.internalPut("artifactId", artifactId);
         context.internalPut("version", version);
         context.internalPut("siteUrl", siteUrl);
